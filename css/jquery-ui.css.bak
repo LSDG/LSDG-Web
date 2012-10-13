@@ -317,6 +317,58 @@
  *
 swipe theming
  */
+$(document).ready(function() {
+    var cont_pos = $("#swipe_container").position();
+    var item_width = $(".item").width();
+    var items = $("#swipe_container > div.item").length;
+    var item_index = 1;
+    var cont_post_temp;
 
+    $("#swipe_container").draggable({ axis: "x", revert: true });
+
+    function bindMouseUp() {
+        $("#swipe_container").unbind('mouseup');
+        cont_post_temp = $("#swipe_container").position().left;
+        if (cont_pos.left > cont_post_temp && item_index != items) {
+            // swipe to right
+            $("#swipe_container").draggable("option", "revert", false);
+            var moveLeft = cont_pos.left - cont_post_temp;
+            moveLeft = Math.abs(item_width - moveLeft);
+            $("#swipe_container").animate({
+                left: '-=' + moveLeft
+            }, 500, function() {
+                $("#swipe_container").draggable("option", "revert", true);
+                cont_pos = $("#swipe_container").position();
+                $("#swipe_container").bind('mouseup', function() {
+                    bindMouseUp();
+                });
+            });
+            item_index++;;
+        } else if (cont_pos.left < cont_post_temp && item_index != 1) {
+            // swipe to left
+            $("#swipe_container").draggable("option", "revert", false);
+            var moveLeft = cont_post_temp - cont_pos.left;
+            moveLeft = Math.abs(item_width - moveLeft);
+            $("#swipe_container").animate({
+                left: '+=' + moveLeft
+            }, 500, function() {
+                $("#swipe_container").draggable("option", "revert", true);
+                cont_pos = $("#swipe_container").position();
+                $("#swipe_container").bind('mouseup', function() {
+                    bindMouseUp();
+                });
+            });
+            item_index = item_index - 1;
+        } else {
+            // on the beginning or end item swipe
+            $("#swipe_container").draggable( "option", "revert", true );
+            $("#swipe_container").bind('mouseup', function() {
+                bindMouseUp();
+            });
+        }
+    }
+
+    $("#swipe_container").mouseup(function() {
+        bindMouseUp();
     });
 });
