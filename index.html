@@ -1,73 +1,213 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html><!-- design by James Felts-->
+<html>
+
 <head>
-<meta charset="utf-8" />
-<title>LSDG Project</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Lubbock Software Developers Group</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/custom.css" rel="stylesheet" type="text/css">
 
- 	<!-- 1140px Grid styles for IE -->
-  	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
-
-  	<!-- The 1140px Grid - http://cssgrid.net/ -->
-  	<link rel="stylesheet" href="css/1140.css" type="text/css" media="screen" />
-  
-  	<!-- Styles -->
-  	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
-
-  	<!--[if lt IE 9]>
-  	<script src="dist/html5shiv.js"></script>
-  	<![endif]-->
-
-	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">  
+<!-- HTML5 shim for IE backwards compatibility -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
 </head>
+
 <body>
-<div class="header_container">
+<!-- Start Primary navigation -->
+<div class="container-fluid">
+
+	<header class="row-fluid">
+	 <nav class="navbar">
+	<div class="navbar-inner">
+    	<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+		</a>
+    <a class="brand" href="#">LSDG</a>
+    
+    <div class="nav-collapse">
+    <ul class="nav">
+      <li><a href="#">Design</a></li>
+      <li><a href="#">Software</a></li>
+      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio<span class="caret"></span></a>
+      	<ul class="dropdown-menu">
+        	<li><a href="#">Client One</a></li>
+            <li><a href="#">Client Two</a></li>
+            <li><a href="#">Client Three</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Calendar</a></li>
+	  <li><a href="#">Projects</a></li>
+      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact Us<span class="caret"></span></a>
+      	<ul class="dropdown-menu">
+        	<li><a href="https://www.facebook.com/groups/378191042235127/"  target="_blank">Facebook</a></li>
+			<li><a href="https://twitter.com/lsdginfo"  target="_blank">Twitter</a></li>
+			<li><a href="http://www.linkedin.com/groups/Lubbock-Software-Developers-Group-4504380?trk=myg_ugrp_ovr" target="_blank">LinkedIn</a></li>
+			<li><a href="https://github.com/"  target="_blank">GitHub</a></li>
+			<li><a href="https://plus.google.com/u/0/101548168416037255049/posts"  target="_blank">Google+</a></li>
+			<li><a href="http://lsdg.skewedaspect.com/"  target="_blank">Forums</a></li>
+		</ul>
+    </ul>
+    </div>
+    </div>
+</nav>
 	
+	</header>
+
+<!-- end primary navigation --> 
+
+<!-- start hero unit -->
+
+<div class="container-fluid">
+		<div class="row-fluid">
+			<header class="span12 hero-unit">
+				<img src="img/logo.png" alt="LSDG" class="pull-right" />
+				<h2>Lubbock Software Developers Group</h2>
+
+<p>The small village of Lubbock Texas merges digital developers for a common cause. Our mission is to learn various digital developments and produce free websites for nonprofit agencies (when we have time).</p>
+<p><a href="#" class="btn btn-primary btn-large">Learn More</a></p>
+
+			</header>
+		</div>	
 </div>
 
-<div class="featured_container">
-	
-</div>
+<!-- End hero unit --> 
+<!-- Anchor interface -->
 
-<div class="container">
-	<div class="row"> 	
-    	<hr>
-        <div class="twelvecol">
-        	<p class="text-left">Lubbock Software Developers group</p>
-		</div>
+<div class="container-fluid">
+	<div class="row-fluid">
+  <ul class="nav nav-tabs nav-stacked span3">
+      <li class="active"><a href="#design" data-toggle="tab">Web Design</a></li>
+      <li><a href="#develop" data-toggle="tab">Our Developers</a></li>
+      <li><a href="#project" data-toggle="tab">Projects</a></li>
+	  <li><a href="#client" data-toggle="tab">Clients</a></li>
+	  <li><a href="#aboutus" data-toggle="tab">About Us</a></li>
+    </ul>
+    
+    
+    <section class="tab-content span9">
+    <article class="tab-pane active" id="design">
+        <h3>Web design</h3>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+   
+    <article class="tab-pane" id="develop"> 
+        <h3>Our Developers</h3>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+    
+     <article class="tab-pane" id="project">
+        <h3>Projects</h3>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</article>
+
+	<article class="tab-pane" id="client">
+        <h3>Clients</h3>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</article>
+
+	<article class="tab-pane" id="aboutus">
+        <h3>About Us</h3>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</article>
+
+
+</section>
+</div></div>
+
+<!-- end anchor interface --> 
+
+<!-- Thumbnail look and feel --> 
+	<div class="row-fluid">
+		<ul class="thumbnails">
+			
+			<li class="span4">
+				<article class="thumbnail">
+					<!-- <img src="img/ferrar.jpg" alt="image one" /> -->
+					<h3>Web design</h3>
+					<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</article>
+			</li>
+
+			<li class="span4">
+				<article class="thumbnail">
+					<!-- <img src="img/jerome.jpg" alt="image two" /> -->
+					<h3>Our developers</h3>
+					<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</article>
+			</li>
+
+			<li class="span4">
+				<article class="thumbnail">
+					<!-- <img src="img/larue.jpg" alt="image three" /> -->
+					<h3>Our Clients</h3>
+					<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</article>
+			</li>
+</ul>
+
+<ul class="thumbnails">
+		
+			<li class="span4">
+				<article class="thumbnail">
+					<!-- <img src="img/larue.jpg" alt="image three" /> -->
+					<h3>Professional</h3>
+					<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</article>
+			</li>
+
+			<li class="span4">
+				<article class="thumbnail">
+					<!-- <img src="img/larue.jpg" alt="image three" /> -->
+					<h3>What we do</h3>
+					<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</article>
+			</li>
+
+			<li class="span4">
+				<article class="thumbnail">
+					<!-- <img src="img/larue.jpg" alt="image three" /> -->
+					<h3>About us</h3>
+					<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</article>
+			</li>
+
+			
+		</ul>
+
 	</div>
+
+<!-- end thumbnail look --> 
+
+<!-- just some communication code for viewports -->
+
+<section class"row-fluid">
+	<div class="span4 visible-desktop">This is visible on the desktop.</div>
+	<div class="span4 visible-tablet">This is visible on the tablet.</div>
+	<div class="span4 visible-phone">This is visible on the phone.</div>
+</section>
+
+<!-- end viewport communication -->
+
+<footer class="span4 offset8">
+  &#169; Lubbock Software Developers Group 2012 
+</footer>
+
+</div>
 </div>
 
-<div class="container">
-	<div class="row">
-		<div class="fivecol">
-        <h2>	<a href="">Home</a><br>
-			<a href="/topics">Topics</a><br>
-			<a href="/forum">Forum</a><br>
-			<a href="/calendar">Calendar</a><br>
-			<a href="/projects">Projects</a><br>
-			<a href="/social">Be Social</a><br>
-		</h2>
-		</div>
-		<div class="sevencol last">
-			<h1>Mission Statment</h1>
-			<p class="text-products">There must be some sort of mission that can go in this area. There must be some sort of mission that can go in this area. There must be some sort of mission that can go in this area. There must be some sort of mission that can go in this area. There must be some sort of mission that can go in this area. </p><br> 
-			<p class="text-products">There must be some sort of mission that can go in this area. There must be some sort of mission that can go in this area. There must be some sort of mission that can go in this area. There must be some sort of mission that can go in this area.  </p> 
-		</div>
-	</div>
-</div>
-
-
-<div class="container">
-	<div class="row">
-		<div class="thirteenthcol">
-        	Bringing digital development for non-profits
-		</div>
-	</div>
-</div>
- 
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
 </body>
 
 </html>
+
+
+<img src="" alt="">
