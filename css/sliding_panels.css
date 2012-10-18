@@ -79,7 +79,7 @@ p.fpo_text { color: #aaa; font-family: Times; font-size: 16px; }
 .sp .panels .linkedin a { color: #ffcc00; }
 .sp .panels .thumbnail { border: 1px solid #fff; }
 
-.sp .tabs .twitter.selected { color: #fff; background-color: #000; border-bottom: 1px solid #000; }
+.sp .tabs .twitter.selected { color: #fff; background-color: #a5c3e9; border-bottom: 1px solid #a5c3e9; }
 .sp .panels .twitter { background: url(../images/twitter.jpg) no-repeat 0px 0px; }
 .sp .panels .twitter .panel_content { margin-right: 150px; }
 .sp .panels .twitter h2 { color: #fff; text-shadow: 1px 1px 0px #000000; filter: dropshadow(color=#000000, offx=1, offy=1); }
@@ -95,3 +95,6 @@ p.fpo_text { color: #aaa; font-family: Times; font-size: 16px; }
 .sp .panels .google a { color: #386ad8; }
 .sp .panels .thumbnail { border: 1px solid #fff; }
 
+/* CSS rules for IE 7&8 */
+
+.sp .tabs span { border: 1px solid #ccc; }
