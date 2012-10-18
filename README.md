@@ -36,4 +36,4 @@ Keep up to date with the groups projects, meetings and individuals...
 Help Us!
 ---------------
 
-Awesome! [Fork and Make Some Bacon!](git://github.com/kingbin/LSDG-Web.git)
+Awesome! [Fork and Make Some Bacon!](https://github.com/LSDG/LSDG-Web.git)
