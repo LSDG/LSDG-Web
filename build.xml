@@ -31,7 +31,6 @@
     <property name="JS_JQUERY_PLUGINS" value="plugins.js" />
     <property name="JS_JQUERY_PLUGINS_MIN" value="plugins.min.js" />
 
-
 <!-- STYLES -->
     <!-- The Works For The Privileged -->
     <target name="css" description="Concatenate CSS source files">
