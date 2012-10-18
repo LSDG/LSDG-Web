@@ -1,0 +1,100 @@
+/* styles */
+
+body { font: 14px Arial; margin: 0px; padding: 30px; background-color: #fff; }
+a, a:visited { color: #00f; }
+h1.fpo_text { color: #aaa; font-family: Times; font-size: 24px; }
+p.fpo_text { color: #aaa; font-family: Times; font-size: 16px; }
+
+.sp h2 { font-size: 1.15em; margin: 0 0 .5em 0; }
+.sp p { font-size: 1em; margin: 0 0 1em 0; }
+
+/* layout */
+.sp { width: 560px; position: relative; float: left; margin: 0px 0px 10px 0px; }
+
+.sp .tabs { position: relative; z-index: 101; display: none; }
+
+.sp .tabs span {
+	display: inline-block;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 8px 12px 8px 12px;
+	margin: 0px;
+	background-color: #fff;
+	cursor: pointer;
+	position: relative;
+}
+
+.sp .tabs span:first-child {
+	padding-left: 15px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	-webkit-border-top-left-radius: 12px;
+	-moz-border-radius-topleft: 12px;
+	border-top-left-radius: 12px;
+}
+
+.sp .tabs span:last-child {
+	padding-right: 15px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	-webkit-border-top-right-radius: 12px;
+	-moz-border-radius-topright: 12px;
+	border-top-right-radius: 12px;
+}
+
+.sp .tabs span.selected {
+	color: #999;
+	border-bottom: 1px solid #fff;
+}
+
+.sp .panel_container {
+	position: relative;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	overflow: hidden;
+	z-index: 100;
+	margin-top: -1px;
+}
+
+.sp .panel_container .panel .panel_content { padding: 15px 15px 5px 15px; }
+
+.sp .tabs .github.selected { color: #fff; background-color: #ededed; border-bottom: 1px solid #ededed; }
+.sp .panels .github { background: url(../images/github.jpg) no-repeat 0px 0px; }
+.sp .panels .github h2 { color: #fff; text-shadow: 1px 1px 0px #000000; filter: dropshadow(color=#000000, offx=1, offy=1);}
+.sp .panels .github p { color: #284108; text-shadow: 1px 1px 0px #fff; filter: dropshadow(color=#fff, offx=1, offy=1); margin-right: 150px; }
+.sp .panels .github a { color: #fff; text-shadow: 1px 1px 0px #000000; filter: dropshadow(color=#000000, offx=1, offy=1);}
+
+.sp .tabs .facebook.selected { color: #ffce6f; background-color: #7998d3; border-bottom: 1px solid #7998d3; }
+.sp .panels .facebook { background: url(../images/facebook.jpg) no-repeat 0px 0px; }
+.sp .panels .facebook .panel_content { margin-right: 125px; }
+.sp .panels .facebook .panel_content h2 { color: #fff; text-shadow: 1px 1px 0px #000000; filter: dropshadow(color=#000000, offx=1, offy=1); }
+.sp .panels .facebook .panel_content p { color: #fff; text-shadow: 1px 1px 0px #000000; filter: dropshadow(color=#000000, offx=1, offy=1); }
+.sp .panels .facebook .panel_content a { color: #ffce6f; }
+
+.sp .tabs .linkedin.selected { color: #fff; background-color: #000; border-bottom: 1px solid #000; }
+.sp .panels .linkedin { background: url(../images/linkedin.jpg) no-repeat 0px 0px; }
+.sp .panels .linkedin .panel_content { margin-right: 150px; }
+.sp .panels .linkedin h2 { color: #fff; }
+.sp .panels .linkedin p { color: #fff; }
+.sp .panels .linkedin a { color: #ffcc00; }
+.sp .panels .thumbnail { border: 1px solid #fff; }
+
+.sp .tabs .twitter.selected { color: #fff; background-color: #a5c3e9; border-bottom: 1px solid #a5c3e9; }
+.sp .panels .twitter { background: url(../images/twitter.jpg) no-repeat 0px 0px; }
+.sp .panels .twitter .panel_content { margin-right: 150px; }
+.sp .panels .twitter h2 { color: #fff; text-shadow: 1px 1px 0px #000000; filter: dropshadow(color=#000000, offx=1, offy=1); }
+.sp .panels .twitter p { color: #fff; text-shadow: 1px 1px 0px #000000; filter: dropshadow(color=#000000, offx=1, offy=1); }
+.sp .panels .twitter a { color: #fff; }
+.sp .panels .thumbnail { border: 1px solid #fff; }
+
+.sp .tabs .google.selected { color: #fff; background-color: #ededed; border-bottom: 1px solid #ededed; }
+.sp .panels .google { background: url(../images/google.jpg) no-repeat 0px 0px; }
+.sp .panels .google .panel_content { margin-right: 150px; }
+.sp .panels .google h2 { color: #000000; text-shadow: 1px 1px 0px #fff; filter: dropshadow(color=#fff, offx=1, offy=1); }
+.sp .panels .google p { color: #000000; }
+.sp .panels .google a { color: #386ad8; }
+.sp .panels .thumbnail { border: 1px solid #fff; }
+
+/* CSS rules for IE 7&8 */
+
+.sp .tabs span { border: 1px solid #ccc; }

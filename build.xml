@@ -1,0 +1,231 @@
+<project name="Build LSDG Style Sheets" default="all" basedir=".">
+
+<!-- SETUPS -->
+    <property name="SRC_DIR" value="src" description="Source folder" />
+    <property name="DIST_DIR" value="." description="Output folder for build targets" />
+
+    <property name="SRC_CSS_DIR" value="${SRC_DIR}/css" description="CSS source folder" />
+    <property name="DIST_CSS_DIR" value="${DIST_DIR}/css" description="Output folder for CSS files" />
+
+    <property name="SRC_JS_DIR" value="${SRC_DIR}/js" description="JS source folder" />
+    <property name="DIST_JS_DIR" value="${DIST_DIR}/js" description="Output folder for JS files" />
+    
+    <property name="BUILD_DIR" value="build" description="Files needed to build" />
+    <property name="YUI" value="${BUILD_DIR}/yuicompressor-2.4.7.jar" description="YUICompressor" />
+ 
+
+
+<!-- Files names for distribution -->
+    <property name="CSS" value="lsdgtyle.css" />
+    <property name="CSS_MIN" value="lsdgtyle.min.css" />
+
+    <property name="CSS_BOOT" value="bootstrap.css" />
+    <property name="CSS_BOOT_MIN" value="bootstrap.min.css" />
+
+    <property name="CSS_IE" value="ie.css" />
+    <property name="CSS_IE_MIN" value="ie.min.css" />
+
+    <property name="CSS_SPAN" value="sliding_panels.css" />
+    <property name="CSS_SPAN_MIN" value="sliding_panels.min.css" />
+
+    <property name="JS_JQUERY_PLUGINS" value="plugins.js" />
+    <property name="JS_JQUERY_PLUGINS_MIN" value="plugins.min.js" />
+
+
+<!-- STYLES -->
+    <!-- The Works For The Privileged -->
+    <target name="css" description="Concatenate CSS source files">
+        <echo message="Building ${DIST_CSS_DIR}/${CSS}" />
+        <concat destfile="${DIST_CSS_DIR}/${CSS}">
+
+            <!-- Developer Wizardry -->
+            <filelist dir="${SRC_CSS_DIR}" files="custom.css,styles.css"></filelist>
+
+        </concat>
+        <echo message="${DIST_CSS_DIR}/${CSS} built." />
+    </target>
+ 
+    <target name="css.min" depends="css" description="Minimize CSS files">
+        <echo message="Building ${CSS_MIN}" />
+        <apply executable="java" parallel="false" verbose="true" dest="${DIST_CSS_DIR}">
+            <fileset dir="${DIST_CSS_DIR}">
+                <include name="${CSS}" />
+            </fileset>
+            <arg line="-jar" />
+            <arg path="${YUI}" />
+            <arg value="--charset" />
+            <arg value="ANSI" />
+            <arg value="-o" />
+            <targetfile />
+            <mapper type="glob" from="${CSS}" to="${CSS_MIN}" />
+        </apply>
+        <echo message="${CSS_MIN} built." />
+    </target>
+ 
+
+    <!-- IE Build For The Wanna B Hipsters! -->
+    <target name="css.ie" description="Concatenate CSS source files">
+        <echo message="Building ${DIST_CSS_DIR}/${CSS_IE} For The Wanna B Hipsters" />
+        <concat destfile="${DIST_CSS_DIR}/${CSS_IE}">
+
+            <!-- Developer Wizardry -->
+            <!--<filelist dir="${SRC_CSS_DIR}" files="ie7.css,ie6.css"></filelist>-->
+            <fileset dir="${SRC_CSS_DIR}" includes="ie.css" />
+
+        </concat>
+        <echo message="${DIST_CSS_DIR}/${CSS_IE} built." />
+    </target>
+ 
+    <target name="css.ie.min" depends="css.ie" description="Minimize CSS files">
+        <echo message="Building ${CSS_IE_MIN}" />
+        <apply executable="java" parallel="false" verbose="true" dest="${DIST_CSS_DIR}">
+            <fileset dir="${DIST_CSS_DIR}">
+                <include name="${CSS_IE}" />
+            </fileset>
+            <arg line="-jar" />
+            <arg path="${YUI}" />
+            <arg value="--charset" />
+            <arg value="ANSI" />
+            <arg value="-o" />
+            <targetfile />
+            <mapper type="glob" from="${CSS_IE}" to="${CSS_IE_MIN}" />
+        </apply>
+        <echo message="${CSS_IE_MIN} built." />
+    </target>
+
+
+
+
+    <!-- Bootstrap Build For The Real Hipsters! -->
+    <target name="css.boot" description="Concatenate CSS source files">
+        <echo message="Building bootstrap ${DIST_CSS_DIR}/${CSS_BOOT} For The Real Hipsters" />
+        <concat destfile="${DIST_CSS_DIR}/${CSS_BOOT}">
+
+            <!-- Developer Wizardry -->
+            <!-- could split out all the different bootstrap css and just include what you're interested in to save kbs on the wire -->
+            <filelist dir="${SRC_CSS_DIR}" files="bootstrap.css,bootstrap-responsive.css"></filelist>
+
+        </concat>
+        <echo message="${DIST_CSS_DIR}/${CSS_BOOT} built." />
+    </target>
+ 
+    <target name="css.boot.min" depends="css.boot" description="Minimize CSS files">
+        <echo message="Building ${CSS_BOOT_MIN}" />
+        <apply executable="java" parallel="false" verbose="true" dest="${DIST_CSS_DIR}">
+            <fileset dir="${DIST_CSS_DIR}">
+                <include name="${CSS_BOOT}" />
+            </fileset>
+            <arg line="-jar" />
+            <arg path="${YUI}" />
+            <arg value="--charset" />
+            <arg value="ANSI" />
+            <arg value="-o" />
+            <targetfile />
+            <mapper type="glob" from="${CSS_BOOT}" to="${CSS_BOOT_MIN}" />
+        </apply>
+        <echo message="${CSS_BOOT_MIN} built." />
+    </target>
+
+
+    <target name="css.span" description="Concatenate CSS source files">
+        <echo message="Building ${DIST_CSS_DIR}/${CSS_SPAN} For The Sliding Panel Hipsters" />
+        <concat destfile="${DIST_CSS_DIR}/${CSS_SPAN}">
+
+            <!-- Developer Wizardry -->
+            <filelist dir="${SRC_CSS_DIR}" files="sliding_panels.css,sliding_panels_ie.css"></filelist>
+
+        </concat>
+        <echo message="${DIST_CSS_DIR}/${CSS_SPAN} built." />
+    </target>
+ 
+    <target name="css.span.min" depends="css.span" description="Minimize CSS files">
+        <echo message="Building ${CSS_SPAN_MIN}" />
+        <apply executable="java" parallel="false" verbose="true" dest="${DIST_CSS_DIR}">
+            <fileset dir="${DIST_CSS_DIR}">
+                <include name="${CSS_SPAN}" />
+            </fileset>
+            <arg line="-jar" />
+            <arg path="${YUI}" />
+            <arg value="--charset" />
+            <arg value="ANSI" />
+            <arg value="-o" />
+            <targetfile />
+            <mapper type="glob" from="${CSS_SPAN}" to="${CSS_SPAN_MIN}" />
+        </apply>
+        <echo message="${CSS_SPAN_MIN} built." />
+    </target>
+
+
+<!-- SCRIPTS -->
+
+
+    <target name="js.jquery_plugins" description="Concatenate jQuery Plugin source files">
+        <echo message="Building ${DIST_JS_DIR}/${JS_JQUERY_PLUGINS}" />
+        <concat destfile="${DIST_JS_DIR}/${JS_JQUERY_PLUGINS}">
+
+            <!-- Developer Wizardry 
+            Neatly wraps the plugin concat in a jquery function -->
+            <fileset dir="${SRC_JS_DIR}" includes="pluginsbegin.js" />
+            <!-- BEGIN your jquery plugins files here -->
+
+            <filelist dir="${SRC_JS_DIR}" files="bootstrap.js,sliding_panels.js"></filelist>
+
+            <!-- END your jquery plugins files here -->
+            <fileset dir="${SRC_JS_DIR}" includes="pluginsend.js" />
+
+        </concat>
+        <echo message="${DIST_JS_DIR}/${JS_JQUERY_PLUGINS} built." />
+    </target>
+ 
+    <target name="js.jquery_plugins.min" depends="js.jquery_plugins" description="Minimize JS jQuery Plugin files">
+        <echo message="Building ${JS_JQUERY_PLUGINS_MIN}" />
+        <apply executable="java" parallel="false" verbose="true" dest="${DIST_JS_DIR}">
+            <fileset dir="${DIST_JS_DIR}">
+                <include name="${JS_JQUERY_PLUGINS}" />
+            </fileset>
+            <arg line="-jar" />
+            <arg path="${YUI}" />
+            <arg value="--charset" />
+            <arg value="ANSI" />
+            <arg value="-o" />
+            <targetfile />
+            <mapper type="glob" from="${JS_JQUERY_PLUGINS}" to="${JS_JQUERY_PLUGINS_MIN}" />
+        </apply>
+        <echo message="${JS_JQUERY_PLUGINS_MIN} built." />
+    </target>
+
+
+
+
+
+    <target name="clean">
+        <!--<delete dir="${DIST_DIR}" /> -->
+    </target>
+
+
+<!-- ANT COMMANDS -->
+ 
+    <target name="all" depends="clean, css, css.min, css.ie, css.ie.min, css.boot, css.boot.min, css.span, css.span.min, js.jquery_plugins, js.jquery_plugins.min">
+        <echo message="Build ALL complete." />
+    </target>
+
+    <target name="bootstrap" depends="clean, css.boot, css.boot.min">
+        <echo message="Build Bootstrap complete." />
+    </target>
+
+    <target name="ie" depends="clean, css.ie, css.ie.min">
+        <echo message="Build IE complete." />
+    </target>
+
+    <target name="span" depends="clean, css.span, css.span.min">
+        <echo message="Build Sliding Panels complete." />
+    </target>
+
+    <target name="styles" depends="clean, css, css.min">
+        <echo message="Build LSDG Custom Styles complete." />
+    </target>
+
+    <target name="jqplugins" depends="clean, js.jquery_plugins, js.jquery_plugins.min">
+        <echo message="Build jQuery Plugins complete." />
+    </target>
+</project>
