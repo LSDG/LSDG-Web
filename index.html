@@ -33,18 +33,18 @@
     
     <div class="nav-collapse">
     <ul class="nav">
-      <li><a href="#">Design</a></li>
-      <li><a href="#">Software</a></li>
-      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio<span class="caret"></span></a>
-      	<ul class="dropdown-menu">
+      <li><a href="design">Design</a></li>
+      <li><a href="software">Software</a></li>
+      <li class="dropdown"><a href="portfolio" class="dropdown-toggle" data-toggle="dropdown">Portfolio<!--<span class="caret"></span>--></a>
+      	<!--<ul class="dropdown-menu">
         	<li><a href="#">Client One</a></li>
             <li><a href="#">Client Two</a></li>
             <li><a href="#">Client Three</a></li>
-        </ul>
+        </ul>-->
       </li>
-      <li><a href="#">Calendar</a></li>
-	  <li><a href="#">Projects</a></li>
-      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact Us<span class="caret"></span></a>
+      <li><a href="calendar">Calendar</a></li>
+	  <li><a href="projects">Projects</a></li>
+      <li class="dropdown"><a href="contact" class="dropdown-toggle" data-toggle="dropdown">Contact Us<span class="caret"></span></a>
       	<ul class="dropdown-menu">
         	<li><a href="https://www.facebook.com/groups/378191042235127/"  target="_blank">Facebook</a></li>
 			<li><a href="https://twitter.com/lsdginfo"  target="_blank">Twitter</a></li>
@@ -79,6 +79,8 @@
 </div>
 
 <!-- End hero unit --> 
+
+
 <!-- Anchor interface -->
 
 <div class="container-fluid">
@@ -196,6 +198,14 @@
 
 <!-- end viewport communication -->
 
+<!-- this is where I'm testing out this stupid js stuff -->
+<section class"row-fluid">
+<div id="abovefooter" class="callOut span4">
+		<!-- new content should go here -->
+</div>
+<section>
+<!-- end js stuff -->
+
 <footer class="span4 offset8">
   &#169; Lubbock Software Developers Group 2012 
 </footer>
@@ -204,7 +214,14 @@
 </div>
 
 <script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>window.jQuery || document.write('<script src="js/Vendor/jquery-1.8.2.min.js"><\/script>')</script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+<script type="text/javascript">
+		jQuery(document).ready(function($){
+
+		});
+	</script>
 
 </body>
 
