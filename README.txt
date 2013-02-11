@@ -1,21 +1,39 @@
-READ ME
--------
+Lubbock Software Development Group Website
+-------------------
+ Lubbock development group helping non profit and digital developers.
 
-Contribute
-----------
+This is a very early version of our template site full of HTML, CSS 
+and JavaScript that's *built* with love. 
 
-New content coming soon...
 
-LSDG
-----
-Lubbock group helping non profit and digital developers.
+Navigation
+-------------------
 
-Web Elements:
+* **Home** Notes ...
+* **Topic Voting** Notes ...
+* **Forum** Notes ...
+* **Meetings Possible Calendar** Notes ...
+* **Projcts** Notes ...
+* **Social Media** Notes ...
 
-Navigation:
-Home
-Topic voting
-Forum
-Meetings possible calendar
-Projects
-Social Media
+
+Contact Us!
+-------------------
+
+Keep up to date with the groups projects, meetings and individuals...
+
+* **[Facebook](https://www.facebook.com/groups/378191042235127/)**
+* **[LinkedIn](http://www.linkedin.com/groups/Lubbock-Software-Developers-Group-4504380/about)**
+* **[@lsdginfo](https://twitter.com/lsdginfo)**
+* **[Google +](https://plus.google.com/u/0/101548168416037255049/posts)**
+* **[Forum](http://lsdg.skewedaspect.com/)**
+* **[Website](http://lbkdev.skewedaspect.org)**
+* **[Github](https://github.com/LSDG)**
+* **Email**: thelsdg@gmail.com
+
+
+
+Help Us!
+---------------
+
+Awesome! [Fork and Make Some Bacon!](https://github.com/LSDG/LSDG-Web.git)
